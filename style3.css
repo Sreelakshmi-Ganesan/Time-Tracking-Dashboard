@@ -1,0 +1,202 @@
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+  }
+  
+  body {
+    font-family: 'Rubik', sans-serif;
+    background-color: hsl(226, 43%, 10%);
+    color: hsl(236, 100%, 87%);
+    font-size: 18px;
+    
+  }
+  
+  
+    .dashboard {
+        display: grid;
+        gap: 2rem; 
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+        max-width: 800px; 
+        margin: 5rem auto; 
+        padding: 2rem; 
+      }
+      
+    
+  
+  .profile {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 1rem;
+    padding: 2rem;
+    grid-column: span 2;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .profile h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    
+        font-size: 2.5rem; 
+        font-weight: 1;  
+        color: white;      
+        margin-top: 0.5rem; 
+      }
+      
+  
+  
+  .timeframes {
+    margin-top: 1.5rem;
+  }
+  
+  .timeframe {
+    background: none;
+    border: none;
+    color: hsl(236, 100%, 87%);
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .timeframe.active {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .card {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  .card h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .hours {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .previous {
+    color: hsl(235, 45%, 61%);
+    font-size: 0.9rem;
+  }
+
+  .timeframe:hover {
+    color: hsl(196, 85%, 5%); 
+    cursor: pointer;           
+  }
+  
+  .card h2:hover {
+    color: hsl(15, 100%, 70%); 
+    cursor: pointer;           
+  }
+
+  
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: hsl(236, 100%, 87%);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* Dark Theme */
+  body.dark-mode {
+    background-color: hsl(236, 33%, 92%);
+    color: hsl(226, 43%, 10%);
+  }
+  
+  body.dark-mode .card {
+    background-color: hsl(235, 46%, 85%);
+  }
+  
+  body.dark-mode .timeframe {
+    color: hsl(226, 43%, 10%);
+  }
+  
+  body.dark-mode .timeframe.active {
+    color: hsl(236, 100%, 87%);
+  }
+  
+  
+  
+  /*Card Colors */
+  .work { border-top: 5px solid hsl(15, 100%, 70%); }
+  .play { border-top: 5px solid hsl(195, 74%, 62%); }
+  .study { border-top: 5px solid hsl(348, 100%, 68%); }
+  .exercise { border-top: 5px solid hsl(145, 58%, 55%); }
+  .social { border-top: 5px solid hsl(264, 64%, 52%); }
+  .selfcare { border-top: 5px solid hsl(43, 84%, 65%); }
+  
+  
+  @media (max-width: 768px) {
+    .profile {
+      grid-column: span 1;
+    }
+  }
+  
